@@ -1,10 +1,10 @@
-#install the package
+# install the package
 pip install -e .
 
-#data prepareration
+# data prepareration
 run: python data_process/down_load_data.py
 
-#main result
+# main result
 
 train:
 
