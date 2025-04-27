@@ -4,12 +4,16 @@ conda create -n csi python==3.10 -y
 # install the package
 pip install -e .
 
-# insatll other package
+# insatll other packages
 
 pip install torch==2.3.1
+
 pip install pytorch-lightning==1.9.1
+
 pip install torchvision==0.18.1
+
 pip install omegaconf==2.3.0
+
 pip install timm==1.0.15
 
 # data prepareration
