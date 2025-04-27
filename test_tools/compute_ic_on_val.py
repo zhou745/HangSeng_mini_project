@@ -43,7 +43,7 @@ def main():
     # config_path = f"./configs/HK_5M_r_v4.yaml"
     # config_path = f"./configs/HK_5M_r_v5.yaml"
     # config_path = f"./configs/HK_5M_r_v6.yaml"
-    # config_path = f"./configs/HK_5M_r_v7.yaml"
+    config_path = f"./configs/HK_5M_r_v7.yaml"
     # config_path = f"./configs/HK_5M_r_v7_10_min.yaml"
     # config_path = f"./configs/HK_5M_r_v7_15_min.yaml"
     # config_path = f"./configs/HK_5M_r_v7_30_min.yaml"
@@ -54,7 +54,7 @@ def main():
     # config_path = f"./configs/CSI_D_r_v7.yaml"
     # config_path = f"./configs/HK_5M_ABL_base.yaml"
     # config_path = f"./configs/HK_5M_ABL_norm.yaml"
-    config_path = f"./configs/HK_5M_ABL_norm_sig.yaml"
+    # config_path = f"./configs/HK_5M_ABL_norm_sig.yaml"
     # model_name = "code_check"
     # model_name = "loss_corr"
     # model_name = "loss_corr_ic"
@@ -81,8 +81,9 @@ def main():
     # model_name = "csi_d"
     # model_name = "abl_base"
     # model_name = "abl_norm"
-    model_name = "abl_sig"
+    # model_name = "abl_sig"
     # model_name = "debug"
+    model_name = "your model name"
     config = OmegaConf.load(config_path)
 
     config_data = config.data.params.train
