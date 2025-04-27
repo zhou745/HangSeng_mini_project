@@ -1,0 +1,10 @@
+data
+data/
+.idea
+.idea/
+*/__pycache__
+__pycache__
+__pycache__/
+*/__pycache__/
+csi_proj.egg-info
+csi_proj.egg-info/

@@ -1,0 +1,52 @@
+model:
+  base_learning_rate: 1e-4
+  target: model.transformer_return.gpt_trainer_r_v2.GPT_stock_r
+  params:
+    moduleconfig:
+      target: modules.transformers.base_v2.StockTransformer
+      params:
+        in_chans: 8
+        num_classes: 73
+        embed_dim: 96
+        depth: 6
+        output_dim: 4
+        num_heads: 3
+        mlp_ratio: 4.
+        num_patches: 100
+    feature_dim: 8
+    obeserve_length: 24
+    prediction_length: 1
+    test_step: 1
+
+data:
+  target: main_candlestick.DataModuleFromConfig
+  params:
+    batch_size: 256
+    num_workers: 4
+    train:
+      target: dataset.HK_5M_dataset.HK_5M_base
+      params:
+        config:
+          root_path: ./data/HK_5M
+          start_idx: 0
+          end_idx: 60
+          stock_start: 0
+          num_stock: 100
+          split: train
+          repeat: 128
+          segment_length: 36  #24 for obsever 12 for predict
+          stock_list: [1, 2, 4, 8, 11, 13, 15, 18, 23, 25, 27, 30, 33, 39, 40, 43, 44, 46, 47, 51, 52, 53, 55, 57, 62, 67, 70]
+
+    validation:
+      target: dataset.HK_5M_dataset.HK_5M_base
+      params:
+        config:
+          root_path: ./data/HK_5M
+          start_idx: 60
+          end_idx: 65
+          stock_start: 0
+          num_stock: 100
+          split: test
+          repeat: 1
+          segment_length: -1
+          stock_list: [1, 2, 4, 8, 11, 13, 15, 18, 23, 25, 27, 30, 33, 39, 40, 43, 44, 46, 47, 51, 52, 53, 55, 57, 62, 67, 70]
