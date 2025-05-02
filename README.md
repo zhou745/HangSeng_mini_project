@@ -21,6 +21,9 @@ run:
 
 python data_process/down_load_data.py
 
+if one has no futu API, plz direcitly unzip HK_5M.zip
+
+
 # main result
 
 train:
