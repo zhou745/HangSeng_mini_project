@@ -43,7 +43,7 @@ data:
         config:
           root_path: ./data/HK_5M
           # size: 256
-          start_idx: 66
+          start_idx: 66  #test set start index
           end_idx: 73  #test the same day
           stock_start: 0
           num_stock: 100
