@@ -17,7 +17,7 @@ pip install omegaconf==2.3.0
 
 pip install timm==1.0.15
 
-# data prepareration
+# data preparation
 run: 
 
 python data_process/down_load_data.py
