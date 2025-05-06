@@ -1,10 +1,11 @@
 # build conda env
 conda create -n csi python==3.10 -y
+conda activate csi
 
 # install the package
 pip install -e .
 
-# insatll other packages
+# install other packages
 
 pip install torch==2.3.1
 
